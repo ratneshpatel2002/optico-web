@@ -1,0 +1,63 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%; 
+    font-family: museomoderno;
+    
+}
+.group{
+    height: 150px;
+    width: 100%;
+    padding: 20px 20px;
+    position: relative;
+    
+}
+.group h1{
+    font-size: xx-large;
+    color: aliceblue;
+    position: absolute;
+   
+    z-index: 1;
+}
+
+img{
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    z-index: 10;
+    background-size: contain;
+    right: 0%;
+    overscroll-behavior: hidden;
+    background-position: cover;
+
+    transform-origin: right ;
+    transition: right linear, ease-in-out 0.4s;
+}
+
+
+.group::after{
+    content: "";
+    height: 150px;
+    width:0%;
+    background-color: rgb(0, 0, 255);
+    position:absolute;
+    right: 0%;
+    bottom: 0%;
+    transition: all ease 0.5s;
+} 
+.group:hover::after{
+    width: 100%;
+    
+ }   
+.group:hover img{
+    
+    margin-right: 100px;
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    background-position: contain;
+} 
